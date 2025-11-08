@@ -1,9 +1,18 @@
 package lotto.domin
 
-class Lotto(private val numbers: List<Int>) {
-    init {
-        require(numbers.size == 6) { "[ERROR] 로또 번호는 6개여야 합니다." }
-    }
+import lotto.constant.LottoMessages
+import lotto.constant.LottoRules
+import lotto.domain.LottoNumber
 
-    // TODO: 추가 기능 구현
+class Lotto(private val numbers: Set<LottoNumber>) {
+    init {
+        require(numbers.size == LottoRules.LOTTO_NUMBER_SIZE) {
+            LottoMessages.lottoNumberCountError(LottoRules.LOTTO_NUMBER_SIZE)
+        }
+    }
+    constructor(numbers: List<Int>) : this(
+        numbers.map(::LottoNumber).toSet()
+    )
+
+    constructor(vararg numbers: Int) : this(numbers.map(::LottoNumber).toSet())
 }
