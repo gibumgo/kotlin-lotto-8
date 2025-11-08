@@ -1,4 +1,4 @@
-package lotto
+package lotto.domin
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
