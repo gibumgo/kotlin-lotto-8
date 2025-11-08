@@ -1,7 +1,7 @@
 package lotto.constant
 
 object LottoMessages {
-    private const val ERROR_TAG = "[ERROR]"
+    const val ERROR_TAG = "[ERROR]"
     private const val SPACE = " "
 
     private const val MONEY_ERROR = "구입 금액은 %d원 단위로 입력해야 합니다."
