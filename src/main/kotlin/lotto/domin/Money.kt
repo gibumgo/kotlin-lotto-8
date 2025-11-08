@@ -18,4 +18,8 @@ data class Money (private val money: Int) {
         return money < 0 || money % 1000 != 0
     }
 
+    fun countOfBuyLotto(): Int {
+        return money / 1000;
+    }
+
 }

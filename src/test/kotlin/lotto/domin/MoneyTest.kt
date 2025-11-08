@@ -27,6 +27,14 @@ class MoneyTest {
         assertMoneyException(7777)
     }
 
+    @Test
+    @DisplayName("금액으로 구매 가능한 로또 개수 계산 기능")
+    fun countOfBuyLotto() {
+        val money = Money(10_000)
+        val count = money.countOfBuyLotto()
+        assertThat(count).isEqualTo(10)
+    }
+
     private fun assertMoneyException(amount: Int) {
         assertThatThrownBy { Money(amount) }
             .isInstanceOf(IllegalArgumentException::class.java)
