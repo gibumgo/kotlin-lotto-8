@@ -1,8 +1,7 @@
-package lotto.domin
+package lotto.domain
 
 import lotto.constant.LottoMessages
 import lotto.constant.LottoRules
-import lotto.domain.LottoNumber
 
 class Lotto(private val numbers: Set<LottoNumber>) {
     init {
@@ -10,9 +9,14 @@ class Lotto(private val numbers: Set<LottoNumber>) {
             LottoMessages.lottoNumberCountError(LottoRules.LOTTO_NUMBER_SIZE)
         }
     }
+
     constructor(numbers: List<Int>) : this(
         numbers.map(::LottoNumber).toSet()
     )
 
     constructor(vararg numbers: Int) : this(numbers.map(::LottoNumber).toSet())
+
+    fun contains(number: LottoNumber): Boolean {
+        return this.numbers.contains(number)
+    }
 }

@@ -1,11 +1,9 @@
-package lotto.domin
+package lotto.domain
 
 import lotto.constant.LottoMessages.lottoNumberRangeError
 import lotto.constant.LottoRules
-import lotto.domain.LottoNumber
 import org.assertj.core.api.AssertionsForClassTypes
 import org.assertj.core.api.ThrowableAssert
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 
