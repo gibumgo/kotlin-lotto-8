@@ -16,6 +16,15 @@ internal class WinningLottoTest {
         assertThat(winningLotto).isNotNull
     }
 
+    @Test
+    @DisplayName("보너스 번호가 당첨 번호와 중복되면 예외 발생")
+    fun duplicateBonus() {
+        val lotto = Lotto(VALID_NUMBERS)
+        assertThrows<IllegalArgumentException> {
+            WinningLotto.of(lotto, 6)
+        }
+    }
+
     companion object {
         private const val LOTTO_SIZE = 6
         private const val START_NUMBER = 1
