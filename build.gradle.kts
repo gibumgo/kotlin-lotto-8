@@ -2,8 +2,8 @@ plugins {
     kotlin("jvm") version "2.2.0"
 }
 
-group = "camp.nextstep.edu"
-version = "1.0-SNAPSHOT"
+group = "io.github.gibumgo"
+version = "0.1.0"
 
 kotlin {
     jvmToolchain(21)

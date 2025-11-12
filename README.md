@@ -1,1 +1,1 @@
-# kotlin-lotto-precourse
+# medieval-trade-guild-management-game-(trading-simulation-project)
